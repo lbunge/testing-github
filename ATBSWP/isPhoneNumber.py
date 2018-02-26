@@ -16,7 +16,9 @@ def isPhoneNumber(text):
             return False
     return True
 
-print('415-555-4242 is a phone number:')
-print(isPhoneNumber('415-555-4242'))
-print('Moshi moshi is a phone number:')
-print(isPhoneNumber('Moshi moshi'))
+print('Please enter a phone number: ')
+checkIfPhoneNumber = input()
+if isPhoneNumber(checkIfPhoneNumber) == True:
+    print(checkIfPhoneNumber + ' is valid')
+else:
+    print(checkIfPhoneNumber + ' is not a valid phone phone number')
