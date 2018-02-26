@@ -1,3 +1,4 @@
+# This program checks for phone numbers
 def isPhoneNumber(text):
     if len(text) != 12:
         return False
@@ -16,9 +17,16 @@ def isPhoneNumber(text):
             return False
     return True
 
-print('Please enter a phone number: ')
-checkIfPhoneNumber = input()
-if isPhoneNumber(checkIfPhoneNumber) == True:
-    print(checkIfPhoneNumber + ' is valid')
-else:
-    print(checkIfPhoneNumber + ' is not a valid phone phone number')
+message = input()
+for i in range(len(message)):
+    chunk = message[i:i+12]
+    if isPhoneNumber(chunk):
+        print('Phone number found: ' + chunk)
+print('Done')
+
+#print('Please enter a phone number: ')
+#checkIfPhoneNumber = input()
+#if isPhoneNumber(checkIfPhoneNumber) == True:
+#    print(checkIfPhoneNumber + ' is valid')
+#else:
+#    print(checkIfPhoneNumber + ' is not a valid phone phone number')
